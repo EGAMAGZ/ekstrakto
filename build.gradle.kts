@@ -19,7 +19,15 @@ dependencies {
     // compose.desktop.currentOs should be used in launcher-sourceSet
     // (in a separate module for demo project and in testMain).
     // With compose.desktop.common you will also lose @Preview functionality
+
     implementation(compose.desktop.currentOs)
+    api(compose.foundation)
+    api(compose.animation)
+    api("moe.tlaster:precompose:1.5.10")
+    api("moe.tlaster:precompose-viewmodel:1.5.10")
+    api("moe.tlaster:precompose-koin:1.5.10")
+    implementation("com.github.pgreze:kotlin-process:1.4.1")
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3")
 }
 
 compose.desktop {
