@@ -1,6 +1,7 @@
 import androidx.compose.ui.window.Window
 import androidx.compose.ui.window.application
 import ui.EkstraktoApp
+import ui.theme.EkstraktoTheme
 
 
 fun main() = application {
@@ -8,6 +9,8 @@ fun main() = application {
         onCloseRequest = ::exitApplication,
         title = "Ekstrakto",
     ) {
-        EkstraktoApp()
+        EkstraktoTheme {
+            EkstraktoApp()
+        }
     }
 }
